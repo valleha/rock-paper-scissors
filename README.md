@@ -9,3 +9,8 @@ The game will be played in the console.
  Return Rock if output between 1 and 10
  Return Paper if output between 11 and 20
  Return Scissors if output between 21 and 30
+
+ Step 2: Write logic to get user choice:
+ (Under the assumptiokn that the user input will always be one of the three choices.)
+ Get user input through prompt()
+ Return user input
