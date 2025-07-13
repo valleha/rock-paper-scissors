@@ -14,3 +14,17 @@ The game will be played in the console.
  (Under the assumptiokn that the user input will always be one of the three choices.)
  Get user input through prompt()
  Return user input
+
+ Step 3: Declare winner and player scores:
+ Define variables humanScore and computerScore and set to 0
+ Compare computer choice and human choice
+    If choice equal its a tie no score forwarded
+    If human choice rock and computer paper, output plus one to computerScore
+    If human choice rock and computer scissors, output plus one to humanScore
+    If human choice paper and computer scissors, output plus one to computerScores
+    if human choice paper and computer rock, output plus one humanScore
+    if human choice scissors and computer rock, output plus one to computerScore 
+    if human choice scissors and computer paper, output plus one to humanScore
+Return current score "The score is " + humanScore + " to " computerScore
+
+
