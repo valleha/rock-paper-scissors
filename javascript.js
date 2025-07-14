@@ -11,15 +11,16 @@ function getComputerChoice() {
 
 var computerChoice = getComputerChoice();
 
+
 console.log("Computer chooses " + getComputerChoice());
 
 function getUserChoice () {
-    const userChoice = prompt("Enter your choice");
-    return userChoice;
+    return prompt("Enter your choice");
+     
 }
 
 var userChoice = getUserChoice();
-console.log("Human chooses " + getUserChoice());
+console.log("Human chooses " + userChoice);
 
 
 /*Define variables humanScore and computerScore and set to 0
