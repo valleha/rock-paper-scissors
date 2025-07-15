@@ -17,14 +17,16 @@ The game will be played in the console.
 
  Step 3: Declare winner and player scores:
  Define variables humanScore and computerScore and set to 0
- Compare computer choice and human choice
-    If choice equal its a tie no score forwarded
+ Define playround function that compares computer choice and human choice
+    If choice equal its a tie no score output
     If human choice rock and computer paper, output plus one to computerScore
     If human choice rock and computer scissors, output plus one to humanScore
     If human choice paper and computer scissors, output plus one to computerScores
     if human choice paper and computer rock, output plus one humanScore
     if human choice scissors and computer rock, output plus one to computerScore 
     if human choice scissors and computer paper, output plus one to humanScore
+    It also prints a string to the console declaring the winner.
 Return current score "The score is " + humanScore + " to " computerScore
+
 
 
