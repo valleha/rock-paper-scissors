@@ -1,25 +1,27 @@
+
+
 function getComputerChoice() {
-    let computerChoice = Math.floor(Math.random() * 30);
-    if (computerChoice >= 1 && computerChoice <= 10) {
+    let choice = Math.floor(Math.random() * 30);
+    if (choice < 11) {
         return "rock";}
-        else if (computerChoice > 10 && computerChoice <= 20) {
+        else if (choice < 21) {
             return "paper"; }
             else {
                 return "scissors";
             }
 }
 
-var computerChoice = getComputerChoice();
+const computerChoice = getComputerChoice();
 
+console.log("Computer chooses " + computerChoice);
 
-console.log("Computer chooses " + getComputerChoice());
 
 function getUserChoice () {
     return prompt("Enter your choice");
      
 }
 
-var userChoice = getUserChoice();
+const userChoice = getUserChoice();
 console.log("Human chooses " + userChoice);
 
 
@@ -34,26 +36,22 @@ console.log("Human chooses " + userChoice);
     if human choice scissors and computer paper, output plus one to humanScore
 Return current score "The score is " + humanScore + " to " computerScore*/
 
-let humanScore = 0;
+let userScore = 0;
 let computerScore = 0;
 
 function keepScore() {
     if (userChoice == "rock" && computerChoice == "paper") {
         computerScore ++;}
     else if (userChoice == "rock" && computerChoice == "scissors") {
-        humanScore ++;}
-    else if (userChoice == "rock" && computerChoice == "paper") {
-        computerScore ++;}
+        userScore ++;}
     else if (userChoice == "paper" && computerChoice == "scissors") {
         computerScore ++;}
     else if (userChoice == "paper" && computerChoice == "rock") {
-        humanScore ++;}
-    else if (userChoice == "rock" && computerChoice == "paper") {
-        computerScore ++;}
+        userScore ++;}
     else if (userChoice == "scissors" && computerChoice == "rock") {
         computerScore ++;}
     else if (userChoice == "scissors" && computerChoice == "paper") {
-        humanScores ++;}
+        userScore ++;}
     else {
         return "it's a tie";
     }
@@ -62,7 +60,7 @@ function keepScore() {
 console.log(keepScore());
 
 function tellScore() {
-    return "The score is " + humanScore + " for human to " + computerScore + " for computer";
+    return "The score is: human " + userScore + " : computer " + computerScore;
 }
 
 console.log(tellScore());
