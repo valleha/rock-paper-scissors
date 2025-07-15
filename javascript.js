@@ -17,8 +17,6 @@ function getUserChoice () {
 }
 
 
-
-
 /*Define variables humanScore and computerScore and set to 0
  Compare computer choice and human choice
     If choice equal its a tie no score forwarded
@@ -36,36 +34,32 @@ let computerScore = 0;
 function playRound(userChoice, computerChoice) {
     if (userChoice == "rock" && computerChoice == "paper") {
         computerScore ++; 
-        console.log("You lose! Paper beats rock!");
-    }
+        console.log("You lose! Paper beats rock!"); }
     else if (userChoice == "rock" && computerChoice == "scissors") {
-        userScore ++;}
+        userScore ++;
+        console.log("You win! rock beats scissors!")}
     else if (userChoice == "paper" && computerChoice == "scissors") {
-        computerScore ++;}
+        computerScore ++;
+        console.log("You lose! scissors beats paper!")}
     else if (userChoice == "paper" && computerChoice == "rock") {
-        userScore ++;}
+        userScore ++;
+        console.log("You win! Paper beats rock!")}
     else if (userChoice == "scissors" && computerChoice == "rock") {
-        computerScore ++;}
+        computerScore ++;
+        console.log("You lose! rock beats scissors!")}
     else if (userChoice == "scissors" && computerChoice == "paper") {
-        userScore ++;}
+        userScore ++;
+        console.log("You win! scissors beats paper!")}
     else {
-        return "it's a tie";
+        console.log("It's a draw!");
 
     }
     
 };
 const userSelection = getUserChoice();
-console.log("Human chooses " +userSelection);
-
 const computerSelection = getComputerChoice();
-console.log("Computer chooses " + computerSelection);
-
-
+console.log("You chose " + userSelection);
+console.log("Computer chose " + computerSelection);
 playRound(userSelection, computerSelection);
 
-function tellScore() {
-    return "The score is: human " + userScore + " : computer " + computerScore;
-}
-
-console.log(tellScore());
 
