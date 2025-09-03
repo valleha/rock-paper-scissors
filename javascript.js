@@ -12,48 +12,23 @@ function getComputerChoice() {
             }
 }
 
-// function getUserChoice () {
-//     return prompt("Enter your choice").toLowerCase();
-//      }
 let computerChoice = "";
 let computerScore = 0;
 let userScore = 0;
 
-// function playRound(userChoice, computerChoice) {
-//     if (userChoice == "rock" && computerChoice == "paper") {
-//         computerScore ++; 
-//         console.log("You lose! Paper beats rock!"); }
-//     else if (userChoice == "rock" && computerChoice == "scissors") {
-//         userScore ++;
-//         console.log("You win! rock beats scissors!")}
-//     else if (userChoice == "paper" && computerChoice == "scissors") {
-//         computerScore ++;
-//         console.log("You lose! scissors beats paper!")}
-//     else if (userChoice == "paper" && computerChoice == "rock") {
-//         userScore ++;
-//         console.log("You win! Paper beats rock!")}
-//     else if (userChoice == "scissors" && computerChoice == "rock") {
-//         computerScore ++;
-//         console.log("You lose! rock beats scissors!")}
-//     else if (userChoice == "scissors" && computerChoice == "paper") {
-//         userScore ++;
-//         console.log("You win! scissors beats paper!")}
-//     else {
-//         console.log("It's a draw!");
 
-//     }
-// };
 
 const division = document.querySelector("div");
 const rock = document.createElement("button");
 const paper = document.createElement("button")
 const scissors = document.createElement("button")
 const callToAction = document.createElement("h1");
+const scoreUser = document.createElement("p");
+const scoreComputer = document.createElement("p");
 
-rock.textContent = "Rock";
-paper.textContent = "Paper";
-scissors.textContent = "Scissors";
-callToAction.textContent = "Choose wisely!"
+
+
+
 
 rock.addEventListener("click", () => { 
         computerChoice = "";
@@ -66,6 +41,9 @@ rock.addEventListener("click", () => {
         userScore ++;
         console.log("You win! rock beats scissors!")}
         else {console.log("It's a draw!")}
+        scoreUser.textContent = "User score is : " + userScore;
+        scoreComputer.textContent = "Computer score is : " + computerScore;
+        
     }
                     )
 
@@ -80,12 +58,14 @@ paper.addEventListener("click", () => {
         userScore ++;
         console.log("You win! Paper beats rock!")}
         else {console.log("It's a draw!")}
+        scoreUser.textContent = "User score is : " + userScore;
+        scoreComputer.textContent = "Computer score is : " + computerScore;
     }
                     )
 
 scissors.addEventListener("click", () => { 
-        computerChoice = "";
-        computerChoice += getComputerChoice();
+       
+        computerChoice = getComputerChoice();
         console.log(computerChoice)
 
         if (computerChoice == "rock") {computerScore ++; 
@@ -94,14 +74,29 @@ scissors.addEventListener("click", () => {
         userScore ++;
         console.log("You win! Scissors beats paper!")}
         else {console.log("It's a draw!")}
+        scoreUser.textContent = "User score is : " + userScore;
+        scoreComputer.textContent = "Computer score is : " + computerScore;
+
+        
     }
                     )
+
+rock.textContent = "Rock";
+paper.textContent = "Paper";
+scissors.textContent = "Scissors";
+callToAction.textContent = "Choose wisely!";
+scoreUser.textContent = "User score is : " + userScore;
+scoreComputer.textContent = "Computer score is : " + computerScore;
+
 
 
 division.appendChild(callToAction);
 division.appendChild(rock);
 division.appendChild(paper);
-division. appendChild(scissors);
+division.appendChild(scissors);
+division.appendChild(scoreUser)
+division.appendChild(scoreComputer);
+
 
 
 
