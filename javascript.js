@@ -12,6 +12,7 @@ function getComputerChoice() {
             }
 }
 
+
 let computerChoice = "";
 let computerScore = 0;
 let userScore = 0;
@@ -29,11 +30,9 @@ const scoreComputer = document.createElement("p");
 
 
 
-
 rock.addEventListener("click", () => { 
         computerChoice = "";
         computerChoice += getComputerChoice();
-        console.log(computerChoice)
 
         if (computerChoice == "paper") {computerScore ++; 
             console.log("You lose! Paper beats rock!"); }
@@ -41,16 +40,13 @@ rock.addEventListener("click", () => {
         userScore ++;
         console.log("You win! rock beats scissors!")}
         else {console.log("It's a draw!")}
-        scoreUser.textContent = "User score is : " + userScore;
-        scoreComputer.textContent = "Computer score is : " + computerScore;
+});
         
-    }
-                    )
+
 
 paper.addEventListener("click", () => { 
         computerChoice = "";
         computerChoice += getComputerChoice();
-        console.log(computerChoice)
 
         if (computerChoice == "scissors") {computerScore ++; 
             console.log("You lose! Scissors beats paper!"); }
@@ -58,28 +54,22 @@ paper.addEventListener("click", () => {
         userScore ++;
         console.log("You win! Paper beats rock!")}
         else {console.log("It's a draw!")}
-        scoreUser.textContent = "User score is : " + userScore;
-        scoreComputer.textContent = "Computer score is : " + computerScore;
-    }
-                    )
+    }     );
 
 scissors.addEventListener("click", () => { 
        
         computerChoice = getComputerChoice();
-        console.log(computerChoice)
-
+   
         if (computerChoice == "rock") {computerScore ++; 
             console.log("You lose! Rock beats scissors!"); }
         else if (computerChoice == "paper") {
         userScore ++;
         console.log("You win! Scissors beats paper!")}
         else {console.log("It's a draw!")}
-        scoreUser.textContent = "User score is : " + userScore;
-        scoreComputer.textContent = "Computer score is : " + computerScore;
 
         
     }
-                    )
+                    );
 
 rock.textContent = "Rock";
 paper.textContent = "Paper";
@@ -98,6 +88,18 @@ division.appendChild(scoreUser)
 division.appendChild(scoreComputer);
 
 
+const btns = document.querySelectorAll("button");//Currently not working as intended throws addEventListener not a function error.
+btns.addEventListener("click",() => {
+            if (computerScore >= 5) {scoreUser.textContent = "Your score is : " + userScore;
+                                    scoreComputer.textContent = "Computer score is : " + computerScore;
+                                    scoreUser.textContent = "Game Over! Computer wins!";}
+            else if (userScore >= 5) {scoreUser.textContent = "Your score is : " + userScore;
+                                    scoreComputer.textContent = "Computer score is : " + computerScore;
+                                    scoreUser.textContent = "Congratulations! You won!"}
+            else {scoreUser.textContent = "User score is : " + userScore;
+                    scoreComputer.textContent = "Computer score is : " + computerScore;}
+}
+                 )
 
 
 
