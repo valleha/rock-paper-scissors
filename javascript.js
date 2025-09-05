@@ -39,8 +39,18 @@ rock.addEventListener("click", () => {
         else if (computerChoice == "scissors") {
         userScore ++;
         console.log("You win! rock beats scissors!")}
-        else {console.log("It's a draw!")}
-});
+        else {console.log("It's a draw!")};
+
+        if (computerScore >= 5) {scoreUser.textContent = "Your score is : " + userScore;
+                                    scoreComputer.textContent = "Computer score is : " + computerScore;
+                                    scoreUser.textContent = "Game Over! Computer wins!";}
+            else if (userScore >= 5) {scoreUser.textContent = "Your score is : " + userScore;
+                                    scoreComputer.textContent = "Computer score is : " + computerScore;
+                                    scoreUser.textContent = "Congratulations! You won!"}
+            else {scoreUser.textContent = "User score is : " + userScore;
+                    scoreComputer.textContent = "Computer score is : " + computerScore;}
+}
+);
         
 
 
@@ -53,8 +63,19 @@ paper.addEventListener("click", () => {
         else if (computerChoice == "rock") {
         userScore ++;
         console.log("You win! Paper beats rock!")}
-        else {console.log("It's a draw!")}
-    }     );
+        else {console.log("It's a draw!")};
+
+
+        if (computerScore >= 5) {scoreUser.textContent = "Your score is : " + userScore;
+                                    scoreComputer.textContent = "Computer score is : " + computerScore;
+                                    scoreUser.textContent = "Game Over! Computer wins!";}
+            else if (userScore >= 5) {scoreUser.textContent = "Your score is : " + userScore;
+                                    scoreComputer.textContent = "Computer score is : " + computerScore;
+                                    scoreUser.textContent = "Congratulations! You won!"}
+            else {scoreUser.textContent = "User score is : " + userScore;
+                    scoreComputer.textContent = "Computer score is : " + computerScore;}
+}
+         );
 
 scissors.addEventListener("click", () => { 
        
@@ -65,10 +86,21 @@ scissors.addEventListener("click", () => {
         else if (computerChoice == "paper") {
         userScore ++;
         console.log("You win! Scissors beats paper!")}
-        else {console.log("It's a draw!")}
+        else {console.log("It's a draw!")};
+
+
+        if (computerScore >= 5) {scoreUser.textContent = "Your score is : " + userScore;
+                                    scoreComputer.textContent = "Computer score is : " + computerScore;
+                                    scoreUser.textContent = "Game Over! Computer wins!";}
+            else if (userScore >= 5) {scoreUser.textContent = "Your score is : " + userScore;
+                                    scoreComputer.textContent = "Computer score is : " + computerScore;
+                                    scoreUser.textContent = "Congratulations! You won!"}
+            else {scoreUser.textContent = "User score is : " + userScore;
+                    scoreComputer.textContent = "Computer score is : " + computerScore;}
+}
 
         
-    }
+    
                     );
 
 rock.textContent = "Rock";
@@ -86,20 +118,6 @@ division.appendChild(paper);
 division.appendChild(scissors);
 division.appendChild(scoreUser)
 division.appendChild(scoreComputer);
-
-
-const btns = document.querySelectorAll("button");//Currently not working as intended throws addEventListener not a function error.
-btns.addEventListener("click",() => {
-            if (computerScore >= 5) {scoreUser.textContent = "Your score is : " + userScore;
-                                    scoreComputer.textContent = "Computer score is : " + computerScore;
-                                    scoreUser.textContent = "Game Over! Computer wins!";}
-            else if (userScore >= 5) {scoreUser.textContent = "Your score is : " + userScore;
-                                    scoreComputer.textContent = "Computer score is : " + computerScore;
-                                    scoreUser.textContent = "Congratulations! You won!"}
-            else {scoreUser.textContent = "User score is : " + userScore;
-                    scoreComputer.textContent = "Computer score is : " + computerScore;}
-}
-                 )
 
 
 
